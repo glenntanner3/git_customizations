@@ -1,4 +1,4 @@
-Both master and dev branches are protected against direct check-ins in order to compartmentalize and independently validate updates. New branches should be created from origin/dev and only merged into dev once independently tested following the merge process. It has proved useful to have two clones of the repository, one where sikuli runs at `~/AppData/Roaming/Sikulix` and a second where your development work occurs `~/GIT/sikulix`.
+Both main and dev branches are protected against direct check-ins in order to compartmentalize and independently validate updates. New branches should be created from origin/dev and only merged into dev once independently tested following the merge process. It has proved useful to have two clones of the repository, one where sikuli runs at `~/AppData/Roaming/Sikulix` and a second where your development work occurs `~/GIT/sikulix`.
 
 If you are new to GIT, I like to describe it as a rotary selector for your file system. At any point in time, you can tell GIT to point to a branch, which holds the files at a certain point in time. One of the advantages of this system is to allow changes/fixes/enhancements to be made within a branch while not affecting the rest of the environment. Once tested the branch can either be merged into the dev branch or deleted. Be aware however, uncommitted changes within a branch will follow across switching branches; so it is best to commit any changes before switching.
 
@@ -26,7 +26,7 @@ If you are new to GIT, I like to describe it as a rotary selector for your file 
    * `git fetch -p`
 1. Create branch
    * `git checkout --no-track -b <bug|task-ID-useful_description_to_others> origin/dev`
-   * `git checkout --no-track -b hotfix-{id}-* origin/master`
+   * `git checkout --no-track -b hotfix-{id}-* origin/main`
 1. Create branch on GitLab and set it to track
    * `git push -u origin HEAD`
 
